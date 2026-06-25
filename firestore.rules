@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Each user can read/write only their own data
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Researcher (admin) can read any user's daily entries via collection group
+    match /{path=**}/daily/{date} {
+      allow read: if request.auth != null && request.auth.uid == 'rgkMX4LVKgaMACituUbNfgsc7zu2';
+    }
+
+    // Researcher can read any user's weekly entries via collection group
+    match /{path=**}/weekly/{week} {
+      allow read: if request.auth != null && request.auth.uid == 'rgkMX4LVKgaMACituUbNfgsc7zu2';
+    }
+
+    // Researcher can read any user's monthly entries via collection group
+    match /{path=**}/monthly/{month} {
+      allow read: if request.auth != null && request.auth.uid == 'rgkMX4LVKgaMACituUbNfgsc7zu2';
+    }
+
+    // Researcher can read and update participant labels
+    match /users/{userId}/profile/{doc} {
+      allow read, write: if request.auth != null && request.auth.uid == 'rgkMX4LVKgaMACituUbNfgsc7zu2';
+    }
+  }
+}
