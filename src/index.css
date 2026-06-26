@@ -7,7 +7,7 @@
     height: 100%;
     background-color: #FAFAF9;
     color: #1A1A18;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -24,3 +24,4 @@
     font-family: 'JetBrains Mono', monospace;
   }
 }
+
