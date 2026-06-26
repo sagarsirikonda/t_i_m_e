@@ -50,7 +50,9 @@ export function DailyEntryCard({ entry, onSave }) {
           style={{ border: '1px solid #E8E6DF', background: '#FAFAF9' }}
         />
         <div className="flex gap-2 mt-2">
-          <SaveButton onSave={handleSave} label="Update" updateLabel="Update" />
+          <div className="flex-1">
+            <SaveButton onSave={handleSave} label="Update" updateLabel="Update" />
+          </div>
           <button
             onClick={() => setEditing(false)}
             className="flex-1 text-sm font-sans rounded"
