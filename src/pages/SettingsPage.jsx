@@ -116,8 +116,20 @@ export default function SettingsPage({ user, signOut, dailyHook, weeklyHook, mon
 
       {/* About */}
       <Section title="About">
-        <p className="text-sm font-sans leading-relaxed" style={{ color: '#555550' }}>
-          This app is part of a personal investigation into whether time perception fluctuates in patterns that are shared across unrelated people. Each person's data is private to them. The researcher sees anonymized patterns across participants.
+        <p className="text-sm font-sans leading-relaxed mb-4" style={{ color: '#555550' }}>
+          This app is part of a long-term research project investigating whether time perception fluctuates in patterns shared across unrelated people.
+        </p>
+        <p className="text-sm font-sans leading-relaxed mb-4" style={{ color: '#555550' }}>
+          Each participant logs privately — how today felt, how the week felt, how the month felt. No context is given, no suggestions made. Just the raw perception, recorded consistently over time.
+        </p>
+        <p className="text-sm font-sans leading-relaxed mb-4" style={{ color: '#555550' }}>
+          The hypothesis: there may be a variable that causes time to feel faster or slower for multiple people simultaneously, possibly with a 1–2 day offset between individuals.
+        </p>
+        <p className="text-sm font-sans leading-relaxed mb-4" style={{ color: '#555550' }}>
+          Your data is private to you. The researcher sees only anonymized patterns across participants — never your identity or personal details.
+        </p>
+        <p className="text-sm font-sans font-medium" style={{ color: '#1A1A18' }}>
+          Please log every day, even on normal days. Every entry matters.
         </p>
       </Section>
     </div>
