@@ -69,9 +69,9 @@ function SignInScreen({ signIn }) {
   return (
     <div className="min-h-screen flex items-center justify-center p-8" style={{ background: '#FAFAF9' }}>
       <div className="max-w-sm w-full text-center">
-        <h1 className="font-serif text-3xl mb-2" style={{ color: '#1A1A18' }}>Temporal Perception Logger</h1>
-        <p className="text-sm font-sans mb-8" style={{ color: '#9E9E8E' }}>
-          Track how fast or slow time feels — daily, weekly, monthly.
+        <h1 className="font-serif text-3xl mb-3" style={{ color: '#1A1A18' }}>Temporal Perception Logger</h1>
+        <p className="text-sm font-sans mb-8 leading-relaxed" style={{ color: '#555550' }}>
+          Log how today, this week, and this month felt — in under a minute. You're part of a quiet study on whether time feels different for everyone at the same time.
         </p>
         <button
           onClick={handleSignIn}
